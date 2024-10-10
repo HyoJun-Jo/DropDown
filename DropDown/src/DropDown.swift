@@ -262,6 +262,14 @@ public final class DropDown: UIView {
 		willSet { tableViewContainer.layer.shadowColor = newValue.cgColor }
 		didSet { reloadAllComponents() }
 	}
+    
+    /**
+    Alias method for `shadowColor` variable to avoid ambiguity.
+    */
+    @objc public dynamic func setupShadowColor(_ color: UIColor) {
+        tableViewContainer.layer.shadowColor = color.cgColor
+        reloadAllComponents()
+    }
 
 	/**
 	The offset of the shadow.
@@ -272,6 +280,14 @@ public final class DropDown: UIView {
 		willSet { tableViewContainer.layer.shadowOffset = newValue }
 		didSet { reloadAllComponents() }
 	}
+    
+    /**
+    Alias method for `shadowOffset` variable to avoid ambiguity.
+    */
+    @objc public dynamic func setupShadowOffset(_ offset: CGSize) {
+        tableViewContainer.layer.shadowOffset = offset
+        reloadAllComponents()
+    }
 
 	/**
 	The opacity of the shadow.
@@ -282,6 +298,14 @@ public final class DropDown: UIView {
 		willSet { tableViewContainer.layer.shadowOpacity = newValue }
 		didSet { reloadAllComponents() }
 	}
+    
+    /**
+    Alias method for `shadowOffset` variable to avoid ambiguity.
+    */
+    @objc public dynamic func setupShadowOpacity(_ opacity: Float) {
+        tableViewContainer.layer.shadowOpacity = opacity
+        reloadAllComponents()
+    }
 
 	/**
 	The radius of the shadow.
